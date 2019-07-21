@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Clase 32 - Promesas</title>
+  </head>
+  <body>
+    <h1>Promesas</h1>    
+    <p>
+        En esta clase veremos las promesas, que son valores que aun no conocemos. Las promesas tienen tre estados:
+        <br><br>
+        pending<br>
+        fullfilled<br>
+        rejected<br><br>
+
+        Las promesas se invocan de la siguiente forma:<br><br>
+
+        new Promise( ( resolve, reject ) => {<br>
+          // --- llamado asíncrono<br>
+          if( todoOK ) {<br>
+            // -- se ejecutó el llamado exitosamente<br>
+            resolve()<br>
+          } else {<br>
+            // -- hubo un error en el llamado<br>
+            reject()<br>
+          }<br>
+        } )<br>
+    </p>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+    <script src="clase32.js"></script>
+  </body>
+</html>

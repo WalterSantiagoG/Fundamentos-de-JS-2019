@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Var - Let - Const</title>
+</head>
+<body>
+    <h1>var, let y const: las diferencias entre ellos</h1>
+    <br>
+    <p>
+        ““var”” es la manera más antigua de declarar variables. No es muy estricta en cuanto al alcance, ya que al declarar variables de esta forma, dichas variables podrán ser accedidas, e incluso modificaddas, tanto dentro como fuera de los bloques internos en una función.
+        <br><br>
+        Con ““let”” por otra parte, el alcance se reduce al bloque (las llaves) en el cual la variable fue declarada. Fuera de este bloque la variable no existe. Una vez declarada la variable con let, no se puede volver a declarar con en ninguna otra parte de la función.
+        <br><br>
+        ““const”” al igual que ““let”” se define en el contexto o alcance de un bloque, a diferencia de let y var, las varibles definidas como constantes (const), ya no podrán ser modificadas ni declaradas nuevamente, en ninguna otra parte de la función o el contexto en el que ya existen.
+        <br><br>
+        La recomendación es reducir siempre al mínimo el alcance de nuestras variables, por lo que se debe usar let en lugar de var mientras sea posible.
+    </p>
+    <script>
+        var walter = {
+            nombre: 'Walter',
+            apellido: 'Santiago',
+            edad: 28
+        }
+        function esMayotDeEdad(persona) {
+            let mensaje
+            const MAYORIA_DE_EDAD = 18
+            
+            if (persona.edad >= MAYORIA_DE_EDAD) {
+                mensaje = 'Es mayor de edad'
+            }else{
+                mensaje = 'Es menor de edad'
+            }
+            console.log(mensaje)
+        }
+
+        esMayotDeEdad(walter)
+    </script>
+</body>
+</html>
